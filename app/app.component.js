@@ -11,11 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.livros = ['Livro de teste 1'];
     }
+    AppComponent.prototype.adicionar = function () {
+        if (this.nomeDoLivro.trim() != '') {
+            this.livros.push(this.nomeDoLivro);
+            this.nomeDoLivro = null;
+        }
+    };
+    AppComponent.prototype.remover = function (index) {
+        this.livros.splice(index, 1); //Remove pelo index do array;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>Ieaah</h1>'
+            template: "\n  \t<h2>Listagem de livros</h2>\n  \t<ul>\n  \t\t<li *ngFor=\"#livro of livros; #i = index\"> <!-- o # fala que a variavel tarefa vai ser visivel somente neste escopo | index variavel do proprio angular-->\n  \t\t\t{{livro}} <a href=\"#\" (click)=\"remover(i)\"> [X] </a>\n  \t\t</li>\n  \t</ul>\n  \t<input type=\"text\" name=\"nome\" placeholder=\"Digite o nome do livro...\" [(ngModel)]=\"nomeDoLivro\"/> \n  \t<!-- [())] = Faz um bind bidirecional de sincronizacao -->\n  \t<button (click)=\"adicionar()\">Adicionar</button>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

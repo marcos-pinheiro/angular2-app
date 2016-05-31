@@ -1,0 +1,8 @@
+<h2>{{titulo | uppercase}}</h2>
+<ul>
+    <li *ngFor="#livro of livros; #i = index">
+        {{livro}} <a href="javascript:void();" (click)="remover(i)">[Excluir]</a>
+    </li>
+</ul>
+<input type="text" name="nome" placeholder="Digite o nome do livro..." [(ngModel)]="nomeDoLivro"/> 
+<button (click)="adicionar()">Adicionar</button>

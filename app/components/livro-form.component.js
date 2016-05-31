@@ -9,24 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
-var livro_lista_component_1 = require('./components/livro-lista.component');
-var livro_form_component_1 = require('./components/livro-form.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var LivroFormComponent = (function () {
+    function LivroFormComponent() {
+        this.livros = ['Livro de teste 1'];
+        this.titulo = "Cadastro de livros";
     }
-    AppComponent = __decorate([
+    LivroFormComponent.prototype.adicionar = function () {
+        if (this.nomeDoLivro.trim() != '') {
+            this.livros.push(this.nomeDoLivro);
+            this.nomeDoLivro = null;
+        }
+    };
+    LivroFormComponent.prototype.remover = function (index) {
+        this.livros.splice(index, 1);
+    };
+    LivroFormComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/templates/main.html',
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
-        }),
-        router_deprecated_1.RouteConfig([
-            { path: '/livros', name: 'LivroLista', component: livro_lista_component_1.LivroListaComponent /*, useAsDefault: true*/ },
-            { path: '/livros/new', name: 'LivroForm', component: livro_form_component_1.LivroFormComponent }
-        ]), 
+            selector: 'livro-form',
+            templateUrl: 'app/templates/livro-form.html'
+        }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LivroFormComponent);
+    return LivroFormComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.LivroFormComponent = LivroFormComponent;

@@ -9,24 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
-var livro_lista_component_1 = require('./components/livro-lista.component');
-var livro_form_component_1 = require('./components/livro-form.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var LivroListaComponent = (function () {
+    function LivroListaComponent() {
     }
-    AppComponent = __decorate([
+    LivroListaComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/templates/main.html',
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
-        }),
-        router_deprecated_1.RouteConfig([
-            { path: '/livros', name: 'LivroLista', component: livro_lista_component_1.LivroListaComponent /*, useAsDefault: true*/ },
-            { path: '/livros/new', name: 'LivroForm', component: livro_form_component_1.LivroFormComponent }
-        ]), 
+            selector: 'livro-lista',
+            templateUrl: 'app/templates/livro-lista.html'
+        }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LivroListaComponent);
+    return LivroListaComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.LivroListaComponent = LivroListaComponent;

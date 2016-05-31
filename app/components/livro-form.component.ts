@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
 })
 export class LivroFormComponent {
    
-    private livros		:string[] = ['Livro de teste 1'];
+    private livros :string[] = ['Livro de teste 1'];
 	private nomeDoLivro :string;
-	private titulo		:string;
+	private titulo :string;
 
 	constructor() {
 		this.titulo = "Cadastro de livros";

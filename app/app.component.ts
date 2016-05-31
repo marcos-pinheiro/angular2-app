@@ -11,8 +11,8 @@ import { LivroFormComponent } from './components/livro-form.component';
 })
 
 @RouteConfig([
-	{path: '/livros', 		name: 'LivroLista', component: LivroListaComponent /*, useAsDefault: true*/}, 
-	{path: '/livros/new', 	name: 'LivroForm', 	component: LivroFormComponent}
+	{path: '/livros', name: 'LivroLista', component: LivroListaComponent /*, useAsDefault: true*/}, 
+	{path: '/livros/new', name: 'LivroForm', component: LivroFormComponent}
 ])
 export class AppComponent {
 	

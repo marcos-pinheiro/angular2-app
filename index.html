@@ -1,25 +1,27 @@
-<html>
+﻿<html>
   <head>
     <base href="/">
     
     <title>Angular 2 QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css"/>
+      <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"/>
   </head>
   
   <body class="container">
     
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+      <script src="node_modules/core-js/client/shim.min.js"></script>
+      <script src="node_modules/zone.js/dist/zone.js"></script>
+      <script src="node_modules/reflect-metadata/Reflect.js"></script>
+      <script src="node_modules/systemjs/dist/system.src.js"></script>
    
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app/boot').catch(function(err){ console.error(err); });
-    </script>
-    
-    
-    <my-app>Loading...</my-app>
+      <script src="systemjs.config.js"></script>
+      <script>
+          System.import('app/boot').catch(function (err) { console.error(err); });
+      </script>
+
+      <application>Loading...</application>
   </body>
 </html>

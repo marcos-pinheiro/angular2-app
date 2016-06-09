@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-import { LivroListaComponent } from './components/livro-lista.component';
-import { LivroFormComponent } from './components/livro-form.component';
+import { BooksRouterComponent } from './books/router';
 
 
 @Component({
-  selector: 'my-app',
-  templateUrl: 'app/templates/main.html',
-  directives: [ROUTER_DIRECTIVES]
+  selector: 'application',
+  templateUrl: 'app/general/templates/index.html',
+  directives: [ROUTER_DIRECTIVES, BooksRouterComponent]
 })
 
 @RouteConfig([
-	{path: '/livros', name: 'LivroLista', component: LivroListaComponent /*, useAsDefault: true*/}, 
-	{path: '/livros/new', name: 'LivroForm', component: LivroFormComponent}
+    { path: '/books/...', component: BooksRouterComponent, as:'BooksRouterComponent'}
 ])
 export class AppComponent {
 	

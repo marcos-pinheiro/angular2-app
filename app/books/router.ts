@@ -5,7 +5,7 @@ import { BookGridComponent } from './components/book-grid'
 
 @Component({
     template: '<router-outlet></router-outlet>',
-    directives: [ROUTER_DIRECTIVES, BookFormComponent]
+    directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     { path: '/',    name: 'BookGrid',   component: BookGridComponent },

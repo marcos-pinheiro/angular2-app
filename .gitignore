@@ -1,4 +1,6 @@
 node_modules/
-node_modules/*
-npm-debug.log
+.vscode/
 app/*.js
+app/**.js
+
+npm-debug.log

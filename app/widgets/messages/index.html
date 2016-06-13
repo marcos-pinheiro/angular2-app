@@ -1,0 +1,6 @@
+<div>
+    <br/>
+    <p *ngFor="let message of messages" class="alert {{message.properties().cssClass}}">
+        <span style="margin-right: 7px;">{{message.properties().icon}}</span> {{message.text}}
+    </p>
+</div>

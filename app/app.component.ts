@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { BooksRouterComponent } from './books/router';
+import { UsersRouterComponent } from './users/router';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { BooksRouterComponent } from './books/router';
 })
 
 @RouteConfig([
-    { path: '/books/...', component: BooksRouterComponent, as:'BooksRouterComponent'}
+    { path: '/books/...', component: BooksRouterComponent, as:'BooksRouterComponent'},
+    { path: '/users/...', component: UsersRouterComponent, as:'UsersRouterComponent'}
 ])
 export class AppComponent {
 	

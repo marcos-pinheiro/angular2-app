@@ -1,8 +1,8 @@
 export class Message {
 
     constructor(
-        public type :MessageType, 
-        public text :string
+        private type :MessageType, 
+        private text :string
     ) { }
     
 
@@ -23,7 +23,7 @@ export class Message {
     }
 
 
-    private properties(): string {
+    private properties(): any {
         var mapa = new Map<MessageType, any>();
 
         mapa.set(MessageType.SUCCESS,   {cssClass: "alert-success", icon: "[SUCCESS]"});

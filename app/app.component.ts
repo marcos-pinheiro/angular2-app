@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { BooksRouterComponent } from './books/router';
-import { UsersRouterComponent } from './users/router';
 
 
 @Component({
   selector: 'application',
   templateUrl: 'app/general/templates/index.html',
-  directives: [ROUTER_DIRECTIVES, BooksRouterComponent]
+  directives: [ROUTER_DIRECTIVES]
 })
 
 @RouteConfig([
-    { path: '/books/...', component: BooksRouterComponent, as:'BooksRouterComponent'},
-    { path: '/users/...', component: UsersRouterComponent, as:'UsersRouterComponent'}
+    { path: '/books/...', component: BooksRouterComponent, as:'BooksRouterComponent'}
 ])
 export class AppComponent {
 	

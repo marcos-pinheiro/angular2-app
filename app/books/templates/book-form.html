@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
         <label for="numberPages">Número de páginas</label>
-        <input type="number" class="form-control" id="numberPages" placeholder="Número de páginas" [(ngModel)]="book.numberOfPages">
+        <input type="number" class="form-control" id="numberPages" placeholder="Número de páginas" [(ngModel)]="book.numberPages">
     </div>
     <div class="checkbox">
         <label for="used">
@@ -18,6 +18,7 @@
         </label>
     </div>
     <button type="button" class="btn btn-primary" (click)="onSave()">Enviar</button>
+    <button type="button" class="btn btn-default" (click)="onSearch()">Consultar</button>
 
     <message-view [messages]="messages"></message-view>
 </form>

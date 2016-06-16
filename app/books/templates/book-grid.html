@@ -1,0 +1,19 @@
+﻿<div>
+    <div><a [routerLink]="['BookForm']">+ Novo</a></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Título</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{book.isbn}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.year}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

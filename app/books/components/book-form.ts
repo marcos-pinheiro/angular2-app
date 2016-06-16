@@ -14,13 +14,13 @@ export class BookFormComponent {
   
     private messages :Message[] = []
     private book :any = {}
-
+    
     constructor(private http :Http) {}
 
 
     private onSearch(): void {
         this.http
-            .get("http://demo5342515.mockable.io/teste")
+            .get("http://demo2050368.mockable.io/resources/teste/")
             .map(response => response.json()) //Converte a o body da resposta para JSON se success
             .subscribe(
                 data  => {
@@ -50,10 +50,11 @@ export class BookFormComponent {
 /*
 Example JSON teste
 {
-	"title": "Livro de teste",
-	"author": "Marcos Pinheiro",
-	"numberPages": 666,
-	"used": true
+    "title": "Livro de teste",
+    "author": "Marcos Pinheiro",
+    "numberPages": 666,
+    "used": true,
+    "year": 2014
 }
 
 

@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core'
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated'
 import { BookFormComponent } from './components/book-form'
 import { BookGridComponent } from './components/book-grid'
 

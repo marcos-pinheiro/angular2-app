@@ -1,6 +1,10 @@
 ﻿<h2>Formulário de Livros</h2>
 <form>
     <div class="form-group">
+        <label for="title">ISBN</label>
+        <input type="text" class="form-control" id="isbn" placeholder="ISBN" [(ngModel)]="book.isbn">
+    </div>
+    <div class="form-group">
         <label for="title">Título</label>
         <input type="text" class="form-control" id="title" placeholder="Título" [(ngModel)]="book.title">
     </div>
@@ -11,6 +15,10 @@
     <div class="form-group">
         <label for="numberPages">Número de páginas</label>
         <input type="number" class="form-control" id="numberPages" placeholder="Número de páginas" [(ngModel)]="book.numberPages">
+    </div>
+    <div class="form-group">
+        <label for="year">Ano</label>
+        <input type="number" class="form-control" id="year" placeholder="Ano" [(ngModel)]="book.year">
     </div>
     <div class="checkbox">
         <label for="used">
